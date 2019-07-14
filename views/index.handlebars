@@ -11,7 +11,7 @@
         {{!-- <p>{{burger_name}}</p> --}}
         <form class="create-form" action="/api/burgers/{{id}}" method="POST">
         <p>{{id}} {{burger_name}}</p>
-        <input input type="hidden" class="burger_id" type="text" value={{this.id}} {{this.devoured}}>
+        <input input type="hidden" class="burger_id" type="text" value={{this.id}}>
         {{!-- <input input type="hidden" class="burger_id" type="text" value={{this.devoured}}> --}}
         <button type="submit" class="btn btn-primary btn-sm">Devour</button>
         {{!-- <p>{{burger_name}}</p> --}}
@@ -24,7 +24,7 @@
 
     <div class="col">
       <h2>Create a Burger</h2>
-      <form class="create-form" action="/api/burgers" method="POST">
+      <form class="create-form" action="/api/burgers" method="PUT">
         {{!-- <div class="form-group">
             <label for="ca"></label> --}}
         <input type="text" id="ca" name="burger_name" placeholder="Burger Name">
