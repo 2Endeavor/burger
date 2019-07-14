@@ -12,7 +12,7 @@ router.get("/", function(req, res) {
       burgers: data
     };
     //console.log("line 14")
-    console.log('what is happening', hbsObject);
+    console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
@@ -25,7 +25,7 @@ router.post("/api/burgers", function(req, res) {
   ], function(result) {
     // Send back the ID of the new quote
    // res.json({ id: result.insertId });
-    res.json("I made it!");
+    res.json({id: result.insertid});
   });
 });
 

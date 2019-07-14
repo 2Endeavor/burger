@@ -1,11 +1,12 @@
 body{
-  background-image: url(https://clipartion.com/wp-content/uploads/2015/11/burger-and-sandwich-png-images-download-pictures-1024x910.png);
+  background-image: url("/assets/img/burger4.jpg");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 100%;
   
 }
-
-
+h2{
+  padding-top: 20px;
+}
 
 li {
   padding: 5px;
@@ -29,14 +30,8 @@ li {
 
 
 .title{
-  color: red;
+  color: black;
   text-align: center;
-  padding-top: 15px;
+  padding-top: 50px;
   background-image: "../public/assets/img/burger1.jpg";
-
-}
-
-.photo{
-  width: 100%;
-  align-content: center;
 }
