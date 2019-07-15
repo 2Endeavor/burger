@@ -15,8 +15,8 @@ This App is hosted on Heroku.
 
 
 ## Image 1 Burger Home Page
-![burger home page](./assets/img/screenshot.jpg)
+![burger home page](./public/assets/img/screenshot.jpg)
 
 
 ## Image 2 Database Screenshot
-![screenshot of database](./assets/img/databaseScreenshot.jpg)
+![screenshot of database](./public/assets/img/databaseScreenshot.jpg)
