@@ -27,19 +27,18 @@ router.post("/api/burgers", function(req, res) {
 });
 
 router.put("/api/burgers/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  // var condition = "id = " + req.params.id;
 
 //  console.log("I'm on line 35 of Burgers controller file")
 //   console.log(response);
 //   console.log(req.params.id);
-//   console.log(req.params.devoured);
+ // console.log(req.params.devoured);
 //   console.log("condition", condition);
   
 
   burger.update(
-    {
-    devoured: req.body.devoured
-    }, 
+  req.body.devoured,
+     
   condition, 
   function(result) {
     if (result.changedRows === 0) {
