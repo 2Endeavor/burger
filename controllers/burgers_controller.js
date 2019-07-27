@@ -12,14 +12,15 @@ router.get("/", function(req, res) {
       burgers: data
     };
     //console.log("line 14")
-    console.log(hbsObject);
+   // console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
 router.post("/api/burgers", function(req, res) {
-  burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
-    console.log(result);
+
+  burger.create(["burger_name"], [req.body.burger_name], function(result) {
+    //console.log(result);
     // Send back the ID of the new quote
    // res.json({ id: result.insertId });
     res.redirect("/");
@@ -27,17 +28,22 @@ router.post("/api/burgers", function(req, res) {
 });
 
 router.put("/api/burgers/:id", function(req, res) {
-  // var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.id;
+  console.log(condition);
 
-//  console.log("I'm on line 35 of Burgers controller file")
-//   console.log(response);
-//   console.log(req.params.id);
- // console.log(req.params.devoured);
-//   console.log("condition", condition);
+ console.log("I'm on line 35 of Burgers controller file")
+  //console.log(res);
+  //console.log(reg.params);
+  //console.log(req.params.id);
+// console.log(req.params.devoured);
+console.log("condition", condition);
   
 
   burger.update(
-  req.body.devoured,
+    {
+      
+      devoured: req.body.devoured
+    },
      
   condition, 
   function(result) {

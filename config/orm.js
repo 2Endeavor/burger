@@ -61,7 +61,7 @@ var orm = {
     queryString += "VALUES (";
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
-
+    console.log("line 64 orm")
     console.log(queryString);
 
     connection.query(queryString, vals, function(err, result) {
@@ -73,7 +73,7 @@ var orm = {
     });
   },
   //update the database
-  // An example of objColVals would be {name: panther, sleepy: true}
+  // An example of objColVals would be {burger_name: cheese, devoured: true}
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
