@@ -8,8 +8,7 @@ $(".change-devoured").on("click", function(event) {
   console.log(newDevoured);
 
   var newDevouredState = {
-    devoured: newDevoured
-  
+    devoured: 1 // 1 indicates the burger is eaten
   };
 
 
