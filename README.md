@@ -1,5 +1,5 @@
 # burger
-https://git.heroku.com/burgers2go.git
+https://burgers2go.herokuapp.com/
  ## App requirements:
 This App requires the following NPM packages:
 Express
