@@ -5,15 +5,16 @@
 
     <div class="col">
       <h2>Burgers Available</h2>
+      <br>
         {{#each burgers}}
         {{#unless devoured}}
       
         <form class="create-form">
-        <p>{{burger_name}}</p>
+        <p><button type="submit" data-id={{this.id}} data-newdevoured={{this.devoured}} class= "change-devoured btn btn-primary btn-sm">Devour</button> {{burger_name}}</p>
 
         <input input type="hidden" class="burger_id" type="text" value={{this.id}}>
 
-        <button type="submit" data-id={{this.id}} data-newdevoured={{this.devoured}} class= "change-devoured btn btn-primary btn-sm">Devour</button>
+        {{!-- <button type="submit" data-id={{this.id}} data-newdevoured={{this.devoured}} class= "change-devoured btn btn-primary btn-sm">Devour</button> --}}
 
         
         </form>
@@ -24,6 +25,7 @@
 
     <div class="col">
       <h2>Create a Burger</h2>
+      <br>
       <form class="create-form" action="/api/burgers" method="POST">
         {{!-- <div class="form-group">
             <label for="ca"></label> --}}
@@ -35,19 +37,22 @@
 
     <div class="col">
       <h2>Devoured</h2>
-      <ul>
+      <br><br>
+    
+      {{!-- <ul> --}}
         {{#each burgers}}
         {{#if devoured}}
         {{burgers devoured=false}}
         <form> 
-        <p>{{burger_name}}</p>
-        <input input type="hidden" class="burger_id" type="text" value={{this.id}}>
-        <button type="submit" data-id={{this.id}}  class= "delete-burger btn btn-success btn-sm">Yum</button>
+        <p style="margin-top: 15px;"><input input type="hidden" class="burger_id" type="text" value={{this.id}}>
+        <button type="submit" data-id={{this.id}}  class= "delete-burger btn btn-success btn-sm">Yum!</button> {{burger_name}} </p>
+        {{!-- <input input type="hidden" class="burger_id" type="text" value={{this.id}}>
+        <button type="submit" data-id={{this.id}}  class= "delete-burger btn btn-success btn-sm">Yum</button> --}}
         </form>
         {{/if}}
         {{/each}}
 
-      </ul>
+      {{!-- </ul> --}}
     </div>
   </div>
 </div>
