@@ -1,7 +1,7 @@
 // Set up MySQL connection.
 var mysql = require("mysql");
 
-// commenting out lines 5-15 during initial testing
+
 var connection;
 if (process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
@@ -23,7 +23,7 @@ connection.connect(function(err) {
     console.error("error connecting: " + err.stack);
     return;
   }
-  console.log("connected as id " + connection.threadId);
+
 });
 
 // Export connection for our ORM to use.

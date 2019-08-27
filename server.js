@@ -7,11 +7,11 @@ var app = express();
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(path.join(__dirname, "public")));
 
-// Parse application body
+// Sets up the Express app to handle data parsing. When we make a post request with a body, this code allows us to parse it and read it
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Set Handlebars.
+// Set the view engine Handlebars.
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));

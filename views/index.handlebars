@@ -9,12 +9,12 @@
         {{#unless devoured}}
       
         <form class="create-form">
-        {{!-- <p>{{burger_name}}</p> --}}
-        <p>{{id}} {{burger_name}}</p>
+        <p>{{burger_name}}</p>
+
         <input input type="hidden" class="burger_id" type="text" value={{this.id}}>
-        {{!-- <input input type="hidden" class="burger_id" type="text" value={{this.devoured}}> --}}
+
         <button type="submit" data-id={{this.id}} data-newdevoured={{this.devoured}} class= "change-devoured btn btn-primary btn-sm">Devour</button>
-        {{!-- <p>{{burger_name}}</p> --}}
+
         
         </form>
         {{/unless}}
@@ -39,7 +39,11 @@
         {{#each burgers}}
         {{#if devoured}}
         {{burgers devoured=false}}
+        <form> 
         <p>{{burger_name}}</p>
+        <input input type="hidden" class="burger_id" type="text" value={{this.id}}>
+        <button type="submit" data-id={{this.id}}  class= "delete-burger btn btn-success btn-sm">Yum</button>
+        </form>
         {{/if}}
         {{/each}}
 
