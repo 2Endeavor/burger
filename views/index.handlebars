@@ -14,8 +14,7 @@
 
         <input input type="hidden" class="burger_id" type="text" value={{this.id}}>
 
-        {{!-- <button type="submit" data-id={{this.id}} data-newdevoured={{this.devoured}} class= "change-devoured btn btn-primary btn-sm">Devour</button> --}}
-
+ 
         
         </form>
         {{/unless}}
@@ -27,32 +26,26 @@
       <h2>Create a Burger</h2>
       <br>
       <form class="create-form" action="/api/burgers" method="POST">
-        {{!-- <div class="form-group">
-            <label for="ca"></label> --}}
-        <input type="text" id="ca" name="burger_name" placeholder="Burger Name">
-        {{!-- <button type="button" class="btn btn-primary btn-sm">Submit</button> --}}
-        {{!-- </div> --}}
+
+        <input type="text" id="ca" name="burger_name" placeholder="Enter New Burger Here">
+
       </form>
     </div>
 
     <div class="col">
       <h2>Devoured</h2>
-      <br><br>
-    
-      {{!-- <ul> --}}
+      <br>
+   
         {{#each burgers}}
         {{#if devoured}}
         {{burgers devoured=false}}
         <form> 
         <p style="margin-top: 15px;"><input input type="hidden" class="burger_id" type="text" value={{this.id}}>
         <button type="submit" data-id={{this.id}}  class= "delete-burger btn btn-success btn-sm">Yum!</button> {{burger_name}} </p>
-        {{!-- <input input type="hidden" class="burger_id" type="text" value={{this.id}}>
-        <button type="submit" data-id={{this.id}}  class= "delete-burger btn btn-success btn-sm">Yum</button> --}}
         </form>
         {{/if}}
         {{/each}}
 
-      {{!-- </ul> --}}
     </div>
   </div>
 </div>

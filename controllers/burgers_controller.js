@@ -22,6 +22,7 @@ router.get("/", function(req, res) {
 router.post("/api/burgers", function(req, res) {
 
   burger.create(["burger_name"], [req.body.burger_name], function(result) {
+    console.log("line 25 burgers_controller req.body.burger_name: ", req.body.burger_name.length)
  
     res.redirect("/");
   });
@@ -58,7 +59,7 @@ router.delete("/api/burgers/:id", function(req,res){
       id: req.params.id
     },
     function(result) {
-      if (result.changedRows === 0) {
+      if (result.affectedRows === 0) {
         // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();
       } 
