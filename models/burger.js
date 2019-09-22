@@ -10,7 +10,9 @@ var burger = {
   //creates burgers
   // The variables cols and vals are arrays.
   create: function(cols, vals, cb) {
-    console.log("line 13 burger.js Vals: ", vals)
+ 
+    vals = titleText(vals);
+  
     orm.create("burgers", cols, vals, function(res) {
       cb(res);
     });
@@ -29,6 +31,35 @@ var burger = {
     });
   }
 };
+
+//
+//Function to convert text entered into title text format for example ben's burger will become Ben's Burger
+function titleText(name){
+  //convert string into an array of lowercase letters
+  var string = name[0].toLowerCase();
+  var textEntered = string.split("");
+  // Identify the letters that should be capitalized
+  tempStringArray = [];
+  tempStringArray.push(textEntered[0].toUpperCase());
+  for (let i = 1; i < textEntered.length; i++) {
+    if (textEntered[i] ===" "){
+      tempStringArray.push(textEntered[i])
+      tempStringArray.push(textEntered[i+1].toUpperCase());
+      i++
+    }else{
+     tempStringArray.push(textEntered[i]);
+    }
+
+    
+    
+  }
+  //Return the array of characters back string that is occupies element zero of an array and return the updated array element
+  temp =[]
+  temp[0] = tempStringArray.join("");
+  name =temp
+  return name;
+ 
+}
 
 // Export the database functions for the controller (burgers_controller.js).
 module.exports = burger;

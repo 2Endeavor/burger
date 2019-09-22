@@ -57,7 +57,7 @@ var orm = {
   // insert into the database
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
-    console.log("line 57 orm file vals=: ", vals, vals.length)
+
 
     queryString += " (";
     queryString += cols.toString();

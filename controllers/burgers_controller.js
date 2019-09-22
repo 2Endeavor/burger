@@ -1,4 +1,3 @@
-// TODO: create router.delete("/api/burgers/:id")
 
 var express = require("express");
 
@@ -22,7 +21,7 @@ router.get("/", function(req, res) {
 router.post("/api/burgers", function(req, res) {
 
   burger.create(["burger_name"], [req.body.burger_name], function(result) {
-    console.log("line 25 burgers_controller req.body.burger_name: ", req.body.burger_name.length)
+
  
     res.redirect("/");
   });
