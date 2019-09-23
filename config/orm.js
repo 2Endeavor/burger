@@ -66,7 +66,7 @@ var orm = {
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
 
-    console.log("line 66 orm file queryString: ", queryString)
+
  
 
     connection.query(queryString, vals, function(err, result) {

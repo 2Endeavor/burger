@@ -1,13 +1,11 @@
-// TODO: add a click function for the yum button that allows the user to delete the burger
-
 $(document).ready(function() {
 $(".change-devoured").on("click", function(event) {
 
 
   var id = $(this).data("id");
-  console.log(id);
+ 
   var newDevoured = $(this).data("newdevoured");
-  console.log(newDevoured);
+ 
 
   var newDevouredState = {
     devoured: 1 // 1 indicates the burger is eaten
